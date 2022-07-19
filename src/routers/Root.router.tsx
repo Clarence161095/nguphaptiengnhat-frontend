@@ -25,7 +25,7 @@ function RootRouter() {
   return (
     <Routes>
       <Route
-        path="/home"
+        path="/home/#/"
         element={
           <RequireAuth>
             <Home />
@@ -40,7 +40,7 @@ function RootRouter() {
           </RequireAuth>
         }
       />
-      <Route path="/login" element={<Login />} />
+      <Route path="/login/#/" element={<Login />} />
     </Routes>
   );
 }

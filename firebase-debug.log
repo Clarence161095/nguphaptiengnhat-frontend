@@ -1,0 +1,32 @@
+[debug] [2022-07-19T16:43:53.548Z] ----------------------------------------------------------------------
+[debug] [2022-07-19T16:43:53.549Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2022-07-19T16:43:53.550Z] CLI Version:   10.9.2
+[debug] [2022-07-19T16:43:53.550Z] Platform:      darwin
+[debug] [2022-07-19T16:43:53.550Z] Node Version:  v14.17.3
+[debug] [2022-07-19T16:43:53.551Z] Time:          Wed Jul 20 2022 01:43:53 GMT+0900 (Japan Standard Time)
+[debug] [2022-07-19T16:43:53.551Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-07-19T16:43:53.610Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-07-19T16:43:53.610Z] > authorizing via signed-in user (nguyenanhtuan161095@gmail.com)
+[debug] [2022-07-19T16:43:53.611Z] [iam] checking project nguphaptiengnhat-35dca for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-07-19T16:43:53.613Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/nguphaptiengnhat-35dca:testIamPermissions [none]
+[debug] [2022-07-19T16:43:53.613Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nguphaptiengnhat-35dca:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-07-19T16:43:54.389Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/nguphaptiengnhat-35dca:testIamPermissions 200
+[debug] [2022-07-19T16:43:54.389Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nguphaptiengnhat-35dca:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-07-19T16:43:54.390Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nguphaptiengnhat-35dca [none]
+[debug] [2022-07-19T16:43:54.793Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nguphaptiengnhat-35dca 200
+[debug] [2022-07-19T16:43:54.793Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nguphaptiengnhat-35dca {"projectId":"nguphaptiengnhat-35dca","projectNumber":"201785795910","displayName":"nguphaptiengnhat","name":"projects/nguphaptiengnhat-35dca","resources":{"hostingSite":"nguphaptiengnhat-35dca"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'nguphaptiengnhat-35dca'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-07-19T16:43:54.795Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nguphaptiengnhat-35dca [none]
+[debug] [2022-07-19T16:43:55.210Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nguphaptiengnhat-35dca 200
+[debug] [2022-07-19T16:43:55.210Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nguphaptiengnhat-35dca {"projectId":"nguphaptiengnhat-35dca","projectNumber":"201785795910","displayName":"nguphaptiengnhat","name":"projects/nguphaptiengnhat-35dca","resources":{"hostingSite":"nguphaptiengnhat-35dca"},"state":"ACTIVE"}
+[debug] [2022-07-19T16:43:55.211Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/201785795910/sites/nguphaptiengnhat-35dca/versions [none]
+[debug] [2022-07-19T16:43:55.211Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/201785795910/sites/nguphaptiengnhat-35dca/versions {"config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-07-19T16:43:56.634Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/201785795910/sites/nguphaptiengnhat-35dca/versions 200
+[debug] [2022-07-19T16:43:56.634Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/201785795910/sites/nguphaptiengnhat-35dca/versions {"name":"projects/201785795910/sites/nguphaptiengnhat-35dca/versions/a5f67b28bfcf550a","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[nguphaptiengnhat-35dca]: beginning deploy... 
+[info] i  hosting[nguphaptiengnhat-35dca]: found 17 files in build 
+[debug] [2022-07-19T16:43:56.641Z] [hosting] uploading with 200 concurrency

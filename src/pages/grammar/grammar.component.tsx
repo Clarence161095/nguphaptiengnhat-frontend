@@ -15,11 +15,11 @@ const getStoreBool = (name: string) => {
     : true;
 };
 
-const config = { FIRST_SLICE: 9 };
+const config = { FIRST_SLICE: 9, DEBOUNCE_TIME: 180000 };
 
 const putData = _.throttle((data) => {
   GrammarApi.PATCH(data);
-}, 30000);
+}, config.DEBOUNCE_TIME);
 
 function GrammarPage() {
   const [includeLowLevelSwitch, setIncludeLowLevelSwitch] = useState(
@@ -200,7 +200,7 @@ function GrammarPage() {
   };
 
   return (
-    <div className="flex flex-col items-center space-y-2 m-[1rem] w-[95vw]">
+    <div className="flex flex-col items-center space-y-2 m-[10px] w-[95vw]">
       {' '}
       <RadioSwitch
         setState={setControlSwitch}
@@ -282,10 +282,10 @@ function GrammarPage() {
       <div className="flex flex-col items-center space-y-2">
         {' '}
         <div
-          className={`flex flex-col w-[90vw] h-[73vh] border-[1px] border-gray-300 rounded p-2 overflow-auto `}
+          className={`flex flex-col w-[90vw] h-[71vh] border-[1px] border-gray-300 rounded p-2 overflow-auto `}
         >
           {' '}
-          <div className="space-x-2 flex flex-row justify-end mb-2">
+          <div className="space-x-2 flex flex-row justify-end mb-5">
             {' '}
             <button
               className="bg-[#2980b9] border-[1px] rounded px-2 pt-2 pb-1 border-gray-300 hover:bg-[#8e44ad] hover:shadow-sm hover:shadow-[#ecf0f1]"
@@ -323,7 +323,10 @@ function GrammarPage() {
             <div className="text-[0.8rem]"> {currentSen?.reibunVN} </div>
           )}{' '}
           {['jpvnro', 'jpvn', 'jpro', 'jp'].includes(switchMode) && (
-            <div className="text-[1.4rem] mb-2 mt-2"> {currentSen?.reibunJA} </div>
+            <div className="md:text-[1.4rem] text-[1.1rem] mb-2 mt-2">
+              {' '}
+              {currentSen?.reibunJA}{' '}
+            </div>
           )}{' '}
           {['jpvnro', 'jpro'].includes(switchMode) && (
             <div className="text-[0.5rem] opacity-50"> {currentSen?.reibunRO} </div>

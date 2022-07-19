@@ -43,7 +43,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="relative p-2">
+    <div className="relative">
       {loading && <LoadingCmp />}
 
       <MenuCmp
